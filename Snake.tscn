@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Snake.cs" type="Script" id=1]
+[ext_resource path="res://SnakeHead.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SnakeBody.tscn" type="PackedScene" id=3]
+
+[node name="Snake" type="Node2D"]
+script = ExtResource( 1 )
+BodyScene = ExtResource( 3 )
+
+[node name="SnakeHead" parent="." instance=ExtResource( 2 )]
+
+[connection signal="Ate" from="SnakeHead" to="." method="OnSnakeHeadAte"]
+[connection signal="Crashed" from="SnakeHead" to="." method="OnSnakeHeadCrashed"]
+[connection signal="Moved" from="SnakeHead" to="." method="OnSnakeHeadMoved"]

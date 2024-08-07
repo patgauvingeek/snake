@@ -1,0 +1,571 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/brick.svg" type="Texture" id=1]
+[ext_resource path="res://assets/menu-restart.svg" type="Texture" id=2]
+[ext_resource path="res://GameOver.cs" type="Script" id=3]
+[ext_resource path="res://assets/menu-restart-disabled.svg" type="Texture" id=4]
+[ext_resource path="res://assets/menu-restart-hover.svg" type="Texture" id=5]
+[ext_resource path="res://assets/menu-restart-click.svg" type="Texture" id=6]
+[ext_resource path="res://assets/tail.svg" type="Texture" id=7]
+[ext_resource path="res://assets/body.svg" type="Texture" id=8]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/dpcomic.ttf"
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = SubResource( 2 )
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -112.0, 112.0 ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -160.0
+margin_top = -111.0
+margin_right = 160.0
+margin_bottom = 121.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -48, 105 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -64, 105 )
+texture = ExtResource( 7 )
+
+[node name="Restart" type="TextureButton" parent="."]
+margin_left = -40.0
+margin_top = 97.0
+margin_right = 40.0
+margin_bottom = 113.0
+focus_neighbour_top = NodePath("../Resume")
+focus_neighbour_bottom = NodePath("../Quit")
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 4 )
+
+[node name="G1" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, -37 )
+
+[node name="G2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -62, -37 )
+
+[node name="G3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -46, -37 )
+
+[node name="G4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, -37 )
+
+[node name="G5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, -21 )
+
+[node name="G6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, -5 )
+
+[node name="G7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 11 )
+
+[node name="G8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 27 )
+
+[node name="G9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -62, 27 )
+
+[node name="G10" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -46, 27 )
+
+[node name="G11" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 27 )
+
+[node name="G12" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 11 )
+
+[node name="G13" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, -5 )
+
+[node name="G14" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -46, -5 )
+
+[node name="A1" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, 27 )
+
+[node name="A2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, 11 )
+
+[node name="A3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, -5 )
+
+[node name="A4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, -21 )
+
+[node name="A5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 18, -37 )
+
+[node name="A6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 34, -37 )
+
+[node name="A7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 50, -21 )
+
+[node name="A8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 50, -5 )
+
+[node name="A9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 50, 11 )
+
+[node name="A10" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 50, 27 )
+
+[node name="A11" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 18, -5 )
+
+[node name="A12" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 34, -5 )
+
+[node name="M1" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 82, 27 )
+
+[node name="M2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 82, 11 )
+
+[node name="M3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 82, -5 )
+
+[node name="M4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 82, -21 )
+
+[node name="M5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 98, -37 )
+
+[node name="M6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, -21 )
+
+[node name="M10" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 130, -37 )
+
+[node name="M11" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 146, -21 )
+
+[node name="M12" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 146, -5 )
+
+[node name="M13" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 146, 11 )
+
+[node name="M14" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 146, 27 )
+
+[node name="M7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, -5 )
+
+[node name="M8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, 11 )
+
+[node name="M9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, 27 )
+
+[node name="E1" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, -37 )
+
+[node name="E5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, -21 )
+
+[node name="E6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, -5 )
+
+[node name="E12" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 194, -5 )
+
+[node name="E13" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 210, -5 )
+
+[node name="E7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 11 )
+
+[node name="E8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 27 )
+
+[node name="E9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 194, 27 )
+
+[node name="E10" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 210, 27 )
+
+[node name="E11" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 226, 27 )
+
+[node name="E2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 194, -37 )
+
+[node name="E3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 210, -37 )
+
+[node name="E4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 226, -37 )
+
+[node name="O1" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 59 )
+
+[node name="O2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 75 )
+
+[node name="O3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 91 )
+
+[node name="O4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 107 )
+
+[node name="O5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -78, 123 )
+
+[node name="O6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -62, 123 )
+
+[node name="O7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -46, 123 )
+
+[node name="O8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 123 )
+
+[node name="O9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 107 )
+
+[node name="O10" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 91 )
+
+[node name="O11" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 75 )
+
+[node name="O12" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -30, 59 )
+
+[node name="O13" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -46, 59 )
+
+[node name="O14" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( -62, 59 )
+
+[node name="V1" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, 59 )
+
+[node name="V2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, 75 )
+
+[node name="V3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 18, 91 )
+
+[node name="V4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 18, 107 )
+
+[node name="V5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 34, 123 )
+
+[node name="V6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 50, 107 )
+
+[node name="V7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 50, 91 )
+
+[node name="V8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 66, 75 )
+
+[node name="V9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 66, 59 )
+
+[node name="E14" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 98, 59 )
+
+[node name="E15" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 98, 75 )
+
+[node name="E16" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 98, 91 )
+
+[node name="E17" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, 91 )
+
+[node name="E18" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 130, 91 )
+
+[node name="E19" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 98, 107 )
+
+[node name="E20" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 98, 123 )
+
+[node name="E21" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, 123 )
+
+[node name="E22" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 130, 123 )
+
+[node name="E23" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 146, 123 )
+
+[node name="E24" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 114, 59 )
+
+[node name="E25" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 130, 59 )
+
+[node name="E26" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 146, 59 )
+
+[node name="R" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 59 )
+
+[node name="R6" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 194, 59 )
+
+[node name="R7" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 210, 59 )
+
+[node name="R8" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 226, 75 )
+
+[node name="R9" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 226, 107 )
+
+[node name="R11" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 210, 91 )
+
+[node name="R12" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 226, 123 )
+
+[node name="R10" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 194, 91 )
+
+[node name="R2" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 75 )
+
+[node name="R3" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 91 )
+
+[node name="R4" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 107 )
+
+[node name="R5" type="Sprite" parent="."]
+position = Vector2( -74, -66 )
+texture = ExtResource( 1 )
+offset = Vector2( 178, 123 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = -160.0
+margin_top = 57.0
+margin_right = 160.0
+margin_bottom = 101.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0.411765, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Restart" to="." method="OnRestartPressed"]

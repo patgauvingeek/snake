@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Main.cs" type="Script" id=1]
+[ext_resource path="res://Apple.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Snake.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Walls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameOver.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Credit.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/dpcomic.ttf"
+
+[sub_resource type="DynamicFont" id=1]
+font_data = SubResource( 2 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Walls" parent="." instance=ExtResource( 5 )]
+
+[node name="Score" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 12.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0.411765, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 3
+valign = 1
+
+[node name="Snake" parent="." instance=ExtResource( 3 )]
+
+[node name="Apple" parent="." instance=ExtResource( 2 )]
+
+[node name="GameOver" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Menu" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 32, 32 )
+
+[node name="Credit" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[connection signal="Ate" from="Snake" to="." method="OnSnakeAte"]
+[connection signal="Crashed" from="Snake" to="." method="OnSnakeCrashed"]
+[connection signal="Restart" from="GameOver" to="." method="OnMenuRestart"]
+[connection signal="Quit" from="Menu" to="." method="OnMenuQuit"]
+[connection signal="Restart" from="Menu" to="." method="OnMenuRestart"]
+[connection signal="Resumed" from="Menu" to="." method="OnMenuResumed"]
+[connection signal="ShowCredit" from="Menu" to="." method="OnMenuShowCredit"]

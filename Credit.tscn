@@ -1,0 +1,489 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/dpcomic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/head_0.svg" type="Texture" id=2]
+[ext_resource path="res://assets/left.svg" type="Texture" id=3]
+[ext_resource path="res://assets/head_1.svg" type="Texture" id=4]
+[ext_resource path="res://assets/tail.svg" type="Texture" id=5]
+[ext_resource path="res://assets/body.svg" type="Texture" id=6]
+[ext_resource path="res://assets/right.svg" type="Texture" id=7]
+[ext_resource path="res://Credit.cs" type="Script" id=8]
+[ext_resource path="res://assets/menu-close-hover.svg" type="Texture" id=9]
+[ext_resource path="res://assets/menu-close.svg" type="Texture" id=10]
+[ext_resource path="res://assets/menu-close-click.svg" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://assets/dpcomic.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.8
+} ]
+
+[node name="Credit" type="Node2D"]
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 176.0, -176.0 ],
+"_edit_vertical_guides_": [ 104.0, -104.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -104.0
+margin_top = -176.0
+margin_right = 104.0
+margin_bottom = 176.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CloseButton" type="TextureButton" parent="."]
+margin_left = 88.0
+margin_top = -176.0
+margin_right = 104.0
+margin_bottom = -160.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 9 )
+
+[node name="ProgrammerTitle" type="Label" parent="."]
+margin_left = -104.0
+margin_top = -152.0
+margin_right = 104.0
+margin_bottom = -128.0
+custom_colors/font_color = Color( 1, 0, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Programmer"
+align = 1
+
+[node name="Programmer" type="Label" parent="."]
+margin_left = -104.0
+margin_top = -128.0
+margin_right = 104.0
+margin_bottom = -112.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Patrick Gauvin"
+align = 1
+
+[node name="ArtisteTitle" type="Label" parent="."]
+margin_left = -104.0
+margin_top = -104.0
+margin_right = 104.0
+margin_bottom = -80.0
+custom_colors/font_color = Color( 1, 0, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Artists"
+align = 1
+
+[node name="Artist" type="Label" parent="."]
+margin_left = -104.0
+margin_top = -80.0
+margin_right = 104.0
+margin_bottom = -45.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Kathylou Gauvin
+Matheo Gauvin"
+align = 1
+
+[node name="VoiceTitle" type="Label" parent="."]
+margin_left = -104.0
+margin_top = -40.0
+margin_right = 104.0
+margin_bottom = -16.0
+custom_colors/font_color = Color( 1, 0, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Voice"
+align = 1
+
+[node name="Voice" type="Label" parent="."]
+margin_left = -104.0
+margin_top = -16.0
+margin_right = 104.0
+margin_bottom = 2.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Kathylou Gauvin"
+align = 1
+
+[node name="MusicTitle" type="Label" parent="."]
+margin_left = -104.0
+margin_top = 8.0
+margin_right = 104.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 1, 0, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Music"
+align = 1
+
+[node name="Music" type="Label" parent="."]
+margin_left = -104.0
+margin_top = 32.0
+margin_right = 104.0
+margin_bottom = 48.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Patrice Lord"
+align = 1
+
+[node name="TesterTitle" type="Label" parent="."]
+margin_left = -104.0
+margin_top = 56.0
+margin_right = 104.0
+margin_bottom = 80.0
+custom_colors/font_color = Color( 1, 0, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Tests"
+align = 1
+
+[node name="Tester" type="Label" parent="."]
+margin_left = -104.0
+margin_top = 80.0
+margin_right = 104.0
+margin_bottom = 96.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Francois Fortier"
+align = 1
+
+[node name="SpecialThanksTitle" type="Label" parent="."]
+margin_left = -104.0
+margin_top = 104.0
+margin_right = 104.0
+margin_bottom = 128.0
+custom_colors/font_color = Color( 1, 0, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0.411765, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Special Thanks"
+align = 1
+
+[node name="Font" type="Label" parent="."]
+margin_left = -104.0
+margin_top = 136.0
+margin_right = 104.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "codeman38 (font)"
+align = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 80, -168 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 64, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 48, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 32, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 16, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 0, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -16, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -32, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( -48, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( -64, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( -80, -168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( -96, -152 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( -96, -136 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( -96, -120 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite16" type="Sprite" parent="."]
+position = Vector2( -96, -104 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite17" type="Sprite" parent="."]
+position = Vector2( -96, -88 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite18" type="Sprite" parent="."]
+position = Vector2( -96, -72 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite19" type="Sprite" parent="."]
+position = Vector2( -96, -56 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite20" type="Sprite" parent="."]
+position = Vector2( -96, -40 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite21" type="Sprite" parent="."]
+position = Vector2( -96, -24 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite22" type="Sprite" parent="."]
+position = Vector2( -96, -8 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite23" type="Sprite" parent="."]
+position = Vector2( -96, 8 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite24" type="Sprite" parent="."]
+position = Vector2( -96, 24 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite25" type="Sprite" parent="."]
+position = Vector2( -96, 40 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite26" type="Sprite" parent="."]
+position = Vector2( -96, 56 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite27" type="Sprite" parent="."]
+position = Vector2( -96, 72 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite28" type="Sprite" parent="."]
+position = Vector2( -96, 88 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite29" type="Sprite" parent="."]
+position = Vector2( -96, 104 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite30" type="Sprite" parent="."]
+position = Vector2( -96, 120 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite31" type="Sprite" parent="."]
+position = Vector2( -96, 136 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite32" type="Sprite" parent="."]
+position = Vector2( -96, 152 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite33" type="Sprite" parent="."]
+position = Vector2( -96, 168 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="Sprite34" type="Sprite" parent="."]
+position = Vector2( -80, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite35" type="Sprite" parent="."]
+position = Vector2( -64, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite36" type="Sprite" parent="."]
+position = Vector2( -48, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite37" type="Sprite" parent="."]
+position = Vector2( -32, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite38" type="Sprite" parent="."]
+position = Vector2( -16, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite39" type="Sprite" parent="."]
+position = Vector2( 0, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite40" type="Sprite" parent="."]
+position = Vector2( 16, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite41" type="Sprite" parent="."]
+position = Vector2( 32, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite42" type="Sprite" parent="."]
+position = Vector2( 48, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite43" type="Sprite" parent="."]
+position = Vector2( 64, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite44" type="Sprite" parent="."]
+position = Vector2( 80, 168 )
+texture = ExtResource( 6 )
+
+[node name="Sprite45" type="Sprite" parent="."]
+position = Vector2( 96, 168 )
+texture = ExtResource( 3 )
+
+[node name="Sprite46" type="Sprite" parent="."]
+position = Vector2( 96, 152 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite47" type="Sprite" parent="."]
+position = Vector2( 96, 136 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite48" type="Sprite" parent="."]
+position = Vector2( 96, 120 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite49" type="Sprite" parent="."]
+position = Vector2( 96, 104 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite50" type="Sprite" parent="."]
+position = Vector2( 96, 88 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite51" type="Sprite" parent="."]
+position = Vector2( 96, 72 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite52" type="Sprite" parent="."]
+position = Vector2( 96, 56 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite53" type="Sprite" parent="."]
+position = Vector2( 96, 40 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite54" type="Sprite" parent="."]
+position = Vector2( 96, 24 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite55" type="Sprite" parent="."]
+position = Vector2( 96, 8 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite56" type="Sprite" parent="."]
+position = Vector2( 96, -8 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite57" type="Sprite" parent="."]
+position = Vector2( 96, -24 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite58" type="Sprite" parent="."]
+position = Vector2( 96, -40 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite59" type="Sprite" parent="."]
+position = Vector2( 96, -56 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite60" type="Sprite" parent="."]
+position = Vector2( 96, -72 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite61" type="Sprite" parent="."]
+position = Vector2( 96, -88 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite62" type="Sprite" parent="."]
+position = Vector2( 96, -104 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite63" type="Sprite" parent="."]
+position = Vector2( 96, -120 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite64" type="Sprite" parent="."]
+position = Vector2( 96, -136 )
+rotation = -1.5708
+texture = ExtResource( 6 )
+
+[node name="Sprite65" type="Sprite" parent="."]
+position = Vector2( 96, -152 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="Sprite66" type="Sprite" parent="."]
+position = Vector2( 96, -152 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( -96, -168 )
+rotation = -1.5708
+texture = ExtResource( 7 )
+
+[connection signal="pressed" from="CloseButton" to="." method="OnCloseButtonPressed"]
