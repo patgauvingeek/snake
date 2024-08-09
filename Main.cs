@@ -44,11 +44,20 @@ public class Main : Node2D
     {
       return;
     }
+    // When using the menu button:
+    //   1. Closes credit if it's opened.
+    if (mCredit.Visible)
+    {
+      mCredit.Hide();
+      return;
+    }
+    //   2. Otherwise, it closes the menu if it's opened.
     if (mMenu.Visible)
     {
       OnMenuResumed();
       return;
     }
+    //   3. Otherwise, it opens the menu.
     Input.MouseMode = Input.MouseModeEnum.Visible;
     mSnake.Pause();
     mMenu.Show();
@@ -85,7 +94,7 @@ public class Main : Node2D
     mScoreLabel.Text = mScore.ToString();
     mMenu.Hide();
     mGameOver.Hide();
-    mSnake.Resume();
+    mSnake.Restart();
   }
 
   private void OnMenuQuit()

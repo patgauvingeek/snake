@@ -32,7 +32,7 @@ public class Music : Node2D
     PlayFromBeginning();
   }
     
-  public void Play()
+  public void Resume()
   {
     mCurrent.StreamPaused = false;
   }
@@ -45,9 +45,10 @@ public class Music : Node2D
   public void Stop()
   {
     Pause();
-    mCurrent = mMusic1;
+    mCurrent = mMusicEnd;
+    PlayFromBeginning();
   }
-  
+
   private void PlayFromBeginning()
   {
     mCurrent.StreamPaused = false;
@@ -86,8 +87,11 @@ public class Music : Node2D
 
   private void OnMusicLoopFinished()
   {
-    mCurrent = mMusic1;
-    // if crash musicEnd else restart music loop ?
+    if (mCurrent != mMusicEnd)
+    {
+      mCurrent = mMusicLoop;
+      PlayFromBeginning();      
+    }
   }
 
 }

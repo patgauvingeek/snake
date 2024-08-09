@@ -39,12 +39,16 @@ public class Snake : Node2D
     var wScreenSize = GetViewportRect().Size;
     var wPosition = Common.GetCenter(wScreenSize);    
     
-    mSnakeHead.Start();    
-    wPosition.x -= 2*Common.cSquareSize;
+    mSnakeHead.Start();
+    wPosition.x -= 4*Common.cSquareSize;
     AddBody(wPosition, 0.0f, "tail");
     wPosition.x += Common.cSquareSize;
     AddBody(wPosition, 0.0f, "body");
-    mSize = 2;
+    wPosition.x += Common.cSquareSize;
+    AddBody(wPosition, 0.0f, "body");
+    wPosition.x += Common.cSquareSize;
+    AddBody(wPosition, 0.0f, "body");
+    mSize = 4;
   }
   
   public void Pause()
@@ -55,7 +59,7 @@ public class Snake : Node2D
   public void Die()
   {
     mDead = true;
-    mSnakeHead.Pause();
+    mSnakeHead.Die();
     Hide();
   }
       
@@ -67,7 +71,16 @@ public class Snake : Node2D
     }
     mSnakeHead.Resume();
   }
-  
+
+  public void Restart()
+  {
+    if (mDead)
+    {
+      return;  
+    }
+    mSnakeHead.Restart();
+  }
+
   private SnakeBody AddBody(Vector2 position, float rotationDegrees, String type = "body")
   {
     var wBody = (SnakeBody)BodyScene.Instance();

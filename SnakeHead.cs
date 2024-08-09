@@ -39,11 +39,14 @@ public class SnakeHead : Area2D
   private Direction mLastDirection;
   private Direction mDirection;
   
+  private Music mMusic;
+  
   // Called when the node enters the scene tree for the first time.
   public override void _Ready()
   {
     mScreenSize = GetViewportRect().Size;
     var wAnimatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
+    mMusic = GetNode<Music>("Music");
     wAnimatedSprite.Play();
   }
   
@@ -56,12 +59,24 @@ public class SnakeHead : Area2D
     mDirection = Direction.None;
   }
   
+  public void Die()
+  {
+    mPause = true;
+  }
+  
   public void Pause()
   {
-    mPause = true;  
+    mMusic.Pause();
+    mPause = true;
   }
   
   public void Resume()
+  {
+    mMusic.Resume();
+    mPause = false;
+  }
+  
+  public void Restart()
   {
     mPause = false;
   }
@@ -88,6 +103,10 @@ public class SnakeHead : Area2D
     if (Input.IsActionPressed("move_up") && mDirection != Direction.Down)
     {
       mCommand = Direction.Up;
+    }
+    if (mDirection == Direction.None && mCommand != Direction.None)
+    {
+      mMusic.Start();
     }
     
     mDelta += delta;
@@ -161,6 +180,7 @@ public class SnakeHead : Area2D
       wApple.Eat(); // move the apple.
       return; 
     }
+    mMusic.Stop();
     EmitSignal(nameof(Crashed));
   }
 

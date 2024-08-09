@@ -17,7 +17,7 @@ public class Credit : Node2D
       mMusic.Start();
       return;
     }
-    mMusic.Stop();
+    mMusic.Pause(); // don't Stop so it won't play the game over bit.
   }
   
   private void OnCloseButtonPressed()
