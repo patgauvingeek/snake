@@ -8,7 +8,7 @@ public class Menu : Node2D
   
   private void OnResumePressed()
   {
-    EmitSignal(nameof(Resumed));
+	EmitSignal(nameof(Resumed));
   }
   
   [Signal]
@@ -16,7 +16,7 @@ public class Menu : Node2D
   
   private void OnRestartPressed()
   {
-    EmitSignal(nameof(Restart));
+	EmitSignal(nameof(Restart));
   }
   
   [Signal]
@@ -24,7 +24,7 @@ public class Menu : Node2D
   
   private void OnQuitPressed()
   {
-    EmitSignal(nameof(Quit));
+	EmitSignal(nameof(Quit));
   }
   
   [Signal]
@@ -32,14 +32,7 @@ public class Menu : Node2D
   
   private void OnCreditPressed()
   {
-    EmitSignal(nameof(ShowCredit));
+	EmitSignal(nameof(ShowCredit));
   }
 
 }
-
-
-
-
-
-
-
