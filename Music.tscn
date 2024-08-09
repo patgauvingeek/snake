@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Music.cs" type="Script" id=1]
+[ext_resource path="res://assets/SerSono0-9.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/SerSonoFin.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/SerSono50-59.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/SerSono40-49.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/SerSono10-19.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/SerSono30-39.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/SerSono20-29.wav" type="AudioStream" id=8]
+
+[node name="Music" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Music1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -20.0
+
+[node name="Music2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="Music3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -20.0
+
+[node name="Music4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.0
+
+[node name="Music5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -20.0
+
+[node name="MusicLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+
+[node name="MusicEnd" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+
+[connection signal="finished" from="Music1" to="." method="OnMusic1Finished"]
+[connection signal="finished" from="Music2" to="." method="OnMusic2Finished"]
+[connection signal="finished" from="Music3" to="." method="OnMusic3Finished"]
+[connection signal="finished" from="Music4" to="." method="OnMusic4Finished"]
+[connection signal="finished" from="Music5" to="." method="OnMusic5Finished"]
+[connection signal="finished" from="MusicLoop" to="." method="OnMusicLoopFinished"]
